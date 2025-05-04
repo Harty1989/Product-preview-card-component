@@ -1,0 +1,217 @@
+html {
+  box-sizing: border-box; /* eliminate margin and padding from calculation */
+  font-size: 100%; /* prevent font change during responsive screens */
+  font-size: 100%; /* 1rem = 10px */
+}
+
+/* all elements inherit box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0; /* remove default margin */
+  padding: 0; /* remove default padding */
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* full height of the viewport */
+  background-color: hsl(30, 38%, 92%);
+}
+
+.container {
+  width: 40%;
+  max-width: 1200px; /* max width of the container */
+  height: 60vh; /* height of the container */
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 10px; /* rounded corners */
+}
+
+.cell {
+  overflow: hidden;
+}
+
+.image-cell {
+  height: 100%;
+}
+
+.mobile {
+  display: none;
+}
+
+.perfume {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.text-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin: 1rem;
+  margin-left: 1.4rem;
+  margin-right: 1.4rem;
+}
+.text-cell h1 {
+  margin: 0; /* remove default margin */
+  padding: 0; /* remove default padding */
+  font-size: 1.2rem;
+  font-family: "Fraunces", serif;
+}
+.text-cell h4 {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.3rem;
+  font-size: 0.4rem;
+  font-weight: 350;
+  text-transform: uppercase;
+}
+.text-cell p {
+  font-size: 0.55rem;
+  font-family: "Montserrat", sans-serif;
+}
+.text-cell .price h2,
+.text-cell h3 {
+  margin-top: 0.6rem;
+  font-family: "Fraunces", serif;
+  display: inline-block;
+}
+.text-cell h2 {
+  color: hsl(158, 36%, 37%);
+  font-size: 1.2rem;
+}
+.text-cell h3 {
+  text-decoration: line-through;
+  font-size: 0.6rem;
+  font-weight: 400;
+  margin-left: 0.5rem;
+  color: hsl(228, 12%, 48%);
+}
+.text-cell button {
+  background-color: hsl(158, 36%, 37%);
+  border-radius: 5px;
+  height: 2rem;
+  border: none;
+  color: white;
+  font-size: 0.6rem;
+  margin-top: 0.2rem;
+}
+.text-cell :hover {
+  background-color: hsl(158, 42%, 18%);
+  cursor: pointer;
+}
+.text-cell .cart {
+  height: 0.7rem;
+  margin-right: 0.8rem;
+  vertical-align: middle;
+}
+
+@media (max-width: 375px) {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* full height of the viewport */
+    background-color: hsl(30, 38%, 92%);
+  }
+  .container {
+    width: 90%;
+    height: 90vh; /* height of the container */
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-rows: 40% 60%; /* two rows */
+    grid-template-columns: 1fr; /* one column */
+    border-radius: 10px; /* rounded corners */
+  }
+  .cell {
+    overflow: hidden;
+  }
+  .image-cell {
+    height: 100%;
+  }
+  .perfume {
+    display: none;
+  }
+  .mobile {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    display: block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .text-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 0.2rem;
+    margin-left: 1.4rem;
+    margin-right: 1.4rem;
+  }
+  .text-cell h1 {
+    margin: 0; /* remove default margin */
+    padding: 0; /* remove default padding */
+    font-size: 2rem;
+    font-family: "Fraunces", serif;
+  }
+  .text-cell h4 {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.2rem;
+    font-size: 0.8rem;
+    font-weight: 350;
+    text-transform: uppercase;
+  }
+  .text-cell p {
+    font-size: 0.9rem;
+    font-family: "Montserrat", sans-serif;
+  }
+  .text-cell .price {
+    margin-top: 0.6rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .text-cell h2 {
+    font-family: "Fraunces", serif;
+    color: hsl(158, 36%, 37%);
+    font-size: 1.8rem;
+  }
+  .text-cell h3 {
+    text-decoration: line-through;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-left: 0.5rem;
+    color: hsl(228, 12%, 48%);
+  }
+  .text-cell button {
+    background-color: hsl(158, 36%, 37%);
+    border-radius: 5px;
+    height: 2.5rem;
+    border: none;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 800;
+    margin-top: 0.2rem;
+  }
+  .text-cell :hover {
+    background-color: hsl(158, 42%, 18%);
+    cursor: pointer;
+  }
+  .text-cell .cart {
+    height: 1.1rem;
+    margin-right: 0.8rem;
+    vertical-align: middle;
+  }
+}/*# sourceMappingURL=style.css.map */
