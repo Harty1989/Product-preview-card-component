@@ -1,7 +1,7 @@
 html {
   box-sizing: border-box; /* eliminate margin and padding from calculation */
   font-size: 100%; /* prevent font change during responsive screens */
-  font-size: 117%;
+  font-size: 24px;
 }
 
 /* all elements inherit box sizing */
@@ -118,6 +118,9 @@ button:hover {
 }
 
 @media (max-width: 375px) {
+  html {
+    font-size: 16px; /* smaller font size for mobile */
+  }
   main {
     display: flex;
     justify-content: center;
