@@ -1,7 +1,7 @@
 html {
   box-sizing: border-box; /* eliminate margin and padding from calculation */
   font-size: 100%; /* prevent font change during responsive screens */
-  font-size: 130%;
+  font-size: 117%;
 }
 
 /* all elements inherit box sizing */
@@ -107,7 +107,7 @@ main {
   font-size: 0.6rem;
   margin-top: 0.2rem;
 }
-.text-cell :hover {
+button:hover {
   background-color: hsl(158, 42%, 18%);
   cursor: pointer;
 }
