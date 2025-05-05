@@ -1,7 +1,6 @@
 html {
   box-sizing: border-box; /* eliminate margin and padding from calculation */
   font-size: 100%; /* prevent font change during responsive screens */
-  font-size: 24px;
 }
 
 /* all elements inherit box sizing */
@@ -36,6 +35,7 @@ main {
 
 .cell {
   overflow: hidden;
+  height: 100%;
 }
 
 .image-cell {
@@ -50,7 +50,7 @@ main {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   display: block;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -59,68 +59,65 @@ main {
 .text-cell {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
   align-items: left;
-  margin: 1rem;
-  margin-left: 1.4rem;
-  margin-right: 1.4rem;
+  margin-left: 24px;
+  margin-right: 24px;
 }
 .text-cell h1 {
   margin: 0; /* remove default margin */
   padding: 0; /* remove default padding */
-  font-size: 1.2rem;
+  font-size: 30px;
   font-family: "Fraunces", serif;
 }
 .text-cell h4 {
   font-family: "Montserrat", sans-serif;
-  letter-spacing: 0.3rem;
-  font-size: 0.4rem;
+  letter-spacing: 5px;
+  font-size: 8px;
   font-weight: 350;
   text-transform: uppercase;
 }
 .text-cell p {
-  font-size: 0.55rem;
+  font-size: 12px;
   font-family: "Montserrat", sans-serif;
 }
-.text-cell .price h2,
-.text-cell h3 {
-  margin-top: 0.6rem;
-  font-family: "Fraunces", serif;
-  display: inline-block;
+.text-cell .price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .text-cell h2 {
   color: hsl(158, 36%, 37%);
-  font-size: 1.2rem;
+  font-size: 26px;
+  font-family: "Fraunces", serif;
 }
 .text-cell h3 {
   text-decoration: line-through;
-  font-size: 0.6rem;
+  font-size: 10px;
   font-weight: 400;
-  margin-left: 0.5rem;
+  margin-left: 16px;
   color: hsl(228, 12%, 48%);
 }
 .text-cell button {
   background-color: hsl(158, 36%, 37%);
   border-radius: 5px;
-  height: 2rem;
+  height: 32px;
   border: none;
   color: white;
-  font-size: 0.6rem;
-  margin-top: 0.2rem;
+  font-size: 10px;
 }
-button:hover {
+.text-cell :hover {
   background-color: hsl(158, 42%, 18%);
   cursor: pointer;
 }
 .text-cell .cart {
-  height: 0.7rem;
-  margin-right: 0.8rem;
+  height: 10px;
+  margin-right: 12px;
   vertical-align: middle;
 }
 
 @media (max-width: 375px) {
-  html {
-    font-size: 16px; /* smaller font size for mobile */
-  }
   main {
     display: flex;
     justify-content: center;
@@ -150,7 +147,7 @@ button:hover {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
-    object-fit: cover;
+       object-fit: cover;
     display: block;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -159,29 +156,29 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: left;
-    margin-top: 0.2rem;
-    margin-left: 1.4rem;
-    margin-right: 1.4rem;
+    margin-top: 4px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
   .text-cell h1 {
     margin: 0; /* remove default margin */
     padding: 0; /* remove default padding */
-    font-size: 2rem;
+    font-size: 32px;
     font-family: "Fraunces", serif;
   }
   .text-cell h4 {
     font-family: "Montserrat", sans-serif;
-    letter-spacing: 0.2rem;
-    font-size: 0.8rem;
+    letter-spacing: 4px;
+    font-size: 12px;
     font-weight: 350;
     text-transform: uppercase;
   }
   .text-cell p {
-    font-size: 0.9rem;
+    font-size: 14px;
     font-family: "Montserrat", sans-serif;
   }
   .text-cell .price {
-    margin-top: 0.6rem;
+    margin-top: 8px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -189,32 +186,32 @@ button:hover {
   .text-cell h2 {
     font-family: "Fraunces", serif;
     color: hsl(158, 36%, 37%);
-    font-size: 1.8rem;
+    font-size: 28px;
   }
   .text-cell h3 {
     text-decoration: line-through;
-    font-size: 1.1rem;
+    font-size: 18px;
     font-weight: 400;
-    margin-left: 0.5rem;
+    margin-left: 8px;
     color: hsl(228, 12%, 48%);
   }
   .text-cell button {
     background-color: hsl(158, 36%, 37%);
     border-radius: 5px;
-    height: 2.5rem;
+    height: 36px;
     border: none;
     color: white;
-    font-size: 0.8rem;
+    font-size: 12px;
     font-weight: 800;
-    margin-top: 0.2rem;
+    margin-bottom: 20px;
   }
   .text-cell :hover {
     background-color: hsl(158, 42%, 18%);
     cursor: pointer;
   }
   .text-cell .cart {
-    height: 1.1rem;
-    margin-right: 0.8rem;
+    height: 18px;
+    margin-right: 10px;
     vertical-align: middle;
   }
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
